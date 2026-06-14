@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" role="img" aria-label="Prospectio favicon">
+  <rect width="32" height="32" rx="7" fill="#F5F1E8"></rect>
+  <g stroke="#0F3B3E" stroke-width="1.5" stroke-linecap="round">
+    <circle cx="16" cy="16" r="9"></circle>
+    <line x1="16" y1="3.5" x2="16" y2="8"></line>
+    <line x1="16" y1="24" x2="16" y2="28.5"></line>
+    <line x1="3.5" y1="16" x2="8" y2="16"></line>
+    <line x1="24" y1="16" x2="28.5" y2="16"></line>
+  </g>
+  <circle cx="16" cy="16" r="3" fill="#B0612C"></circle>
+</svg>

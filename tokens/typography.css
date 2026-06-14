@@ -1,0 +1,45 @@
+:root {
+  /* ---- Families -------------------------------------------------------- */
+  --font-display: 'Fraunces', 'Times New Roman', Georgia, serif;        /* display ONLY */
+  --font-ui:      'Hanken Grotesk', system-ui, -apple-system, sans-serif; /* body & UI */
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace; /* figures */
+
+  /* ---- Display optical sizing ----------------------------------------- */
+  --display-opsz: 'opsz' 144; /* @kind font */
+
+  /* ---- Type scale (px) ------------------------------------------------- */
+  --fs-display-xl: 72px;  /* hero */
+  --fs-display-l:  56px;
+  --fs-display-m:  40px;
+  --fs-display-s:  30px;  /* section titles */
+  --fs-heading:    22px;
+  --fs-subheading: 18px;
+  --fs-body:       15px;  /* default UI body */
+  --fs-body-s:     14px;
+  --fs-label:      13px;
+  --fs-caption:    12px;
+  --fs-eyebrow:    11px;  /* letter-spaced uppercase micro-label */
+
+  /* ---- Weights --------------------------------------------------------- */
+  --fw-regular:  400; /* @kind font */
+  --fw-medium:   500; /* @kind font */
+  --fw-semibold: 600; /* @kind font */
+  --fw-bold:     700; /* @kind font */
+
+  /* ---- Line heights ---------------------------------------------------- */
+  --lh-tight:    1.08; /* @kind font */
+  --lh-snug:     1.25; /* @kind font */
+  --lh-normal:   1.5; /* @kind font */
+
+  /* ---- Letter spacing -------------------------------------------------- */
+  --ls-display:  -0.02em;
+  --ls-tight:    -0.01em;
+  --ls-normal:   0; /* @kind font */
+  --ls-eyebrow:  0.14em; /* uppercase eyebrow labels */
+  --ls-mono:     0.01em;
+
+  /* ---- Semantic roles -------------------------------------------------- */
+  --text-display:   var(--fw-semibold) var(--fs-display-l)/var(--lh-tight) var(--font-display);
+  --text-title:     var(--fw-semibold) var(--fs-display-s)/var(--lh-snug) var(--font-display);
+  --text-heading-f: var(--fw-medium)   var(--fs-heading)/var(--lh-snug) var(--font-ui);
+}

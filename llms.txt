@@ -1,0 +1,39 @@
+# Prospectio
+
+> Prospectio is a UK property prospecting and lead-intelligence tool that finds HMO landlords and property owners from public planning, EPC and HMO-licence data, prices each opportunity instantly, and helps agents reach the owners by direct mail.
+
+Prospectio is built and run by Antek Automation, a UK automation studio registered with the ICO. The product is pre-launch and onboarding its first clients; the only conversion step on the site is booking a 15-minute call.
+
+## What it does
+
+- **Public-data discovery** — continuously reads council planning applications, EPC records and HMO-licence registers across councils, alongside licensed commercial property data.
+- **Instant HMO appraisal** — estimates valuation, room-by-room rents and projected gross yield the moment a lead appears.
+- **Owner identification** — resolves the person or company behind each property (corporate or individual) and the best address to reach them.
+- **Built-in CRM pipeline** — moves each owner from found to contacted to won.
+- **Direct-mail outreach** — reaches owners by post with templates; email is optional for corporate contacts.
+- **Compliance handled** — suppression and opt-out are enforced before any send, the Mailing Preference Service is honoured, and each client's records stay isolated.
+
+## Who it is for
+
+- Letting and sales agents wanting more landlord and management instructions.
+- Property managers wanting to win HMO management.
+- Compliance trades (fire safety, heating, electrical) wanting recurring, mandated work.
+- Also a fit for HMO operators sizing deals. Prospectio serves the people who **service** property owners — not buyers or developers chasing sites.
+
+## Key facts
+
+- Data sources: public planning, EPC and HMO-licence registers, enriched with licensed property and ownership data. No scraping of private accounts.
+- Coverage: Hampshire and BCP (Bournemouth, Christchurch and Poole) now, expanding nationally.
+- Compliance: postal-first outreach under legitimate interest, with suppression and opt-out enforced; the client controls their own lawful basis.
+- Pricing: set per client by area, volume and channels — quoted on a call, no public tiers.
+- Builder: Antek Automation (UK, ICO-registered).
+
+## Links
+
+- Homepage: https://prospectio.co.uk/
+- How it works: https://prospectio.co.uk/#how
+- What it does: https://prospectio.co.uk/#what
+- Who it is for: https://prospectio.co.uk/#who
+- FAQ: https://prospectio.co.uk/#faq
+- Privacy: https://prospectio.co.uk/privacy.html
+- Terms: https://prospectio.co.uk/terms.html

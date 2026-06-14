@@ -1,0 +1,63 @@
+:root {
+  /* ---- Base palette ---------------------------------------------------- */
+  /* Paper */
+  --paper:            #F5F1E8; /* base background */
+  --paper-raised:     #EDE7D9; /* cards & surfaces */
+  --paper-sunken:     #EEE8DB; /* subtle hover / inset wells */
+
+  /* Ink & text */
+  --ink:              #17150F; /* primary text & structure */
+  --text-secondary:   #565147; /* secondary text */
+  --text-muted:       #847E70; /* muted text & labels */
+
+  /* Hairlines */
+  --hairline:         #DBD4C4; /* borders & dividers */
+  --hairline-strong:  #CBC3B0; /* a touch stronger when needed */
+
+  /* Brand — petrol */
+  --petrol:           #0F3B3E; /* primary: headers, buttons, reticle, links */
+  --petrol-light:     #155055; /* hovers & accents */
+  --petrol-tint:      #E4E9E5; /* faint petrol wash on paper */
+
+  /* Brand — copper (the signal; use sparingly) */
+  --copper:           #B0612C; /* CTAs & the found-opportunity highlight */
+  --copper-dark:      #8A4A1E; /* copper as small text on paper */
+  --copper-tint:      #F0E4D6; /* faint copper wash */
+
+  /* ---- Status (muted, editorial) -------------------------------------- */
+  --status-positive:  #4F7A5E; /* sage — won / qualified */
+  --status-negative:  #9E4B36; /* brick — lost */
+  --status-attention: #B0612C; /* copper — in progress */
+  --status-neutral:   #5E7173; /* slate — info / new */
+
+  /* ---- Pipeline stage colours (kept muted) ---------------------------- */
+  --stage-new:          #5E7173; /* slate */
+  --stage-reviewing:    #6B7E8C; /* muted slate-blue */
+  --stage-qualified:    #4F7A5E; /* sage */
+  --stage-contacted:    #0F3B3E; /* petrol */
+  --stage-responded:    #155055; /* petrol light */
+  --stage-proposal:     #B0612C; /* copper */
+  --stage-won:          #3E6149; /* deep sage */
+  --stage-lost:         #9E4B36; /* brick */
+  --stage-nurture:      #8C8595; /* muted grey-lilac */
+
+  /* ---- Semantic aliases ----------------------------------------------- */
+  --bg-base:          var(--paper);
+  --bg-raised:        var(--paper-raised);
+  --bg-hover:         var(--paper-sunken);
+
+  --text-primary:     var(--ink);
+  --text-link:        var(--petrol);
+  --text-link-hover:  var(--petrol-light);
+  --text-on-brand:    var(--paper);
+
+  --surface-card:     var(--paper-raised);
+  --border-default:   var(--hairline);
+  --border-strong:    var(--hairline-strong);
+
+  --brand-primary:        var(--petrol);
+  --brand-primary-hover:  var(--petrol-light);
+  --brand-cta:            var(--copper);
+
+  --focus-ring:       var(--petrol);
+}

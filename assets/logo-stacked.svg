@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 100" fill="none" role="img" aria-label="Prospectio">
+  <defs>
+    
+  </defs>
+  <g transform="translate(56,4)">
+    <g stroke="#0F3B3E" stroke-width="1.6" stroke-linecap="round">
+      <circle cx="24" cy="24" r="14.5"></circle>
+      <line x1="24" y1="2.5" x2="24" y2="14"></line>
+      <line x1="24" y1="34" x2="24" y2="45.5"></line>
+      <line x1="2.5" y1="24" x2="14" y2="24"></line>
+      <line x1="34" y1="24" x2="45.5" y2="24"></line>
+      <line x1="24" y1="6.5" x2="24" y2="9.5"></line>
+      <line x1="24" y1="38.5" x2="24" y2="41.5"></line>
+      <line x1="6.5" y1="24" x2="9.5" y2="24"></line>
+      <line x1="38.5" y1="24" x2="41.5" y2="24"></line>
+    </g>
+    <circle cx="24" cy="24" r="3.4" fill="#B0612C"></circle>
+  </g>
+  <text class="wm" x="80" y="84">Prospectio</text>
+</svg>

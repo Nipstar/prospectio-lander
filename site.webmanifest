@@ -1,0 +1,25 @@
+{
+  "name": "Prospectio",
+  "short_name": "Prospectio",
+  "description": "Find and reach UK property owners. Prospectio finds HMO opportunities from public data, prices them, and helps you reach owners by post.",
+  "lang": "en-GB",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#0F3B3E",
+  "background_color": "#F5F1E8",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/logo-stacked.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "maskable"
+    }
+  ]
+}

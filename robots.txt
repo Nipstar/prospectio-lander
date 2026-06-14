@@ -1,0 +1,29 @@
+# Prospectio — prospectio.co.uk
+# Search and AI crawlers are welcome. Nothing here is gated.
+
+User-agent: *
+Allow: /
+
+# AI assistants — explicitly allowed so Prospectio can be cited, not just ranked.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://prospectio.co.uk/sitemap.xml

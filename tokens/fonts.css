@@ -1,0 +1,8 @@
+/* Prospectio webfonts — loaded from Google Fonts.
+   SUBSTITUTION NOTE: the brand specifies Fraunces, Hanken Grotesk and
+   JetBrains Mono. All three are the genuine families, served here from the
+   Google Fonts CDN (the build sandbox cannot bundle the binaries locally).
+   If you need fully self-hosted .woff2 files, drop them in assets/fonts/ and
+   replace these imports with local @font-face rules. */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
