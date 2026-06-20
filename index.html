@@ -28,7 +28,7 @@
 <link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#0F3B3E">
 <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="landing.css">
+<link rel="stylesheet" href="landing.css?v=20260620">
 
 <!-- ===== Structured data: built to own branded search for "Prospectio" ===== -->
 <script type="application/ld+json">
@@ -545,29 +545,20 @@
   wireModal('bookModal', '[data-book]', 'modalClose');
   wireModal('waitlistModal', '[data-waitlist]', 'waitlistClose');
 
-  // VSL: lazy-load the source, then muted-autoplay once in view (captions baked in).
+  // VSL: show the poster until the viewer clicks, then load and play with sound.
   (function () {
     var v = document.getElementById('vsl-player');
     if (!v) return;
     var src = v.querySelector('source[data-src]');
     var loaded = false;
-    function load() {
-      if (loaded || !src) return;
-      loaded = true;
-      src.src = src.getAttribute('data-src');
-      v.load();
+    function play() {
+      if (!src) return;
+      if (!loaded) { loaded = true; src.src = src.getAttribute('data-src'); v.load(); }
+      v.muted = false;
       var p = v.play();
-      if (p && p.catch) p.catch(function () {}); // poster stays if autoplay blocked
+      if (p && p.catch) p.catch(function () {});
     }
-    if ('IntersectionObserver' in window) {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) { if (e.isIntersecting) { load(); io.disconnect(); } });
-      }, { rootMargin: '200px' });
-      io.observe(v);
-    } else {
-      load();
-    }
-    v.addEventListener('click', load); // click-to-play fallback
+    v.addEventListener('click', play);
   })();
 
   // Mobile nav

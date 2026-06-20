@@ -60,8 +60,8 @@ img, svg { display: block; }
 .btn-petrol:hover { background: var(--petrol-light); border-color: var(--petrol-light); color: var(--paper); }
 .btn-outline { background: transparent; color: var(--ink); border-color: var(--hairline-strong); }
 .btn-outline:hover { background: var(--paper-raised); color: var(--ink); }
-.btn-on-dark { background: transparent; color: var(--paper); border-color: color-mix(in srgb, var(--paper) 42%, transparent); }
-.btn-on-dark:hover { background: color-mix(in srgb, var(--paper) 12%, transparent); border-color: var(--paper); color: var(--paper); }
+.btn-on-dark { background: transparent; color: var(--paper); border-color: rgba(245, 241, 232, 0.42); }
+.btn-on-dark:hover { background: rgba(245, 241, 232, 0.12); border-color: var(--paper); color: var(--paper); }
 .btn-sm { height: 40px; padding: 0 16px; font-size: 14.5px; }
 .btn-lg { height: 54px; padding: 0 28px; font-size: 16.5px; }
 
@@ -90,7 +90,7 @@ section { padding: 92px 0; }
 
 /* ---- VSL ---- */
 .vsl { padding: 40px 0 8px; }
-.vsl-frame { margin: 0; border: var(--border-width) solid var(--hairline); border-radius: 8px; overflow: hidden; background: var(--paper-raised); box-shadow: var(--shadow-card); }
+.vsl-frame { max-width: 720px; margin: 0 auto; border: var(--border-width) solid var(--hairline); border-radius: 8px; overflow: hidden; background: var(--paper-raised); box-shadow: var(--shadow-card); }
 .vsl-video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--paper-raised); }
 @media (max-width: 860px) { .vsl { padding: 24px 0 4px; } }
 
