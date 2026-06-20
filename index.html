@@ -46,7 +46,6 @@
         "@type": "ContactPoint",
         "contactType": "sales",
         "email": "hello@prospectio.co.uk",
-        "telephone": "+44-23-9200-4120",
         "areaServed": "GB"
       },
       "parentOrganization": { "@id": "https://prospectio.co.uk/#antek" }
@@ -200,6 +199,19 @@
     </div>
   </section>
 
+  <!-- ===================== VSL ===================== -->
+  <section class="vsl" aria-label="See how Prospectio works">
+    <div class="wrap">
+      <figure class="vsl-frame">
+        <video id="vsl-player" class="vsl-video" muted playsinline preload="none" controls
+               poster="assets/prospectio-vsl-poster.webp"
+               aria-label="Prospectio — every landlord in your patch, found and queued for outreach">
+          <source data-src="assets/prospectio-vsl.mp4" type="video/mp4" />
+        </video>
+      </figure>
+    </div>
+  </section>
+
   <!-- ===================== THE PROBLEM ===================== -->
   <section id="problem" class="section-divider" aria-labelledby="problem-h">
     <div class="wrap">
@@ -232,7 +244,6 @@
         <div class="figure">≈7<small>hours a week, back</small></div>
         <div>
           <blockquote>We built this for a Hampshire letting agent. It replaced about seven hours a week of manual research.</blockquote>
-          <p class="attrib">One real result, stated plainly. No name, no logo — we won't invent proof we don't have yet.</p>
         </div>
       </div>
     </div>
@@ -422,8 +433,11 @@
       </span>
       <h2 id="cta-h">Book a 15-minute call.</h2>
       <p>We'll show you the kind of leads Prospectio finds in your patch, and tell you plainly what it would cost.</p>
-      <button class="btn btn-cta btn-lg" data-book>Book a 15-minute call</button>
-      <p class="micro">Prefer to write first? hello@prospectio.co.uk · +44 (0)23 9200 4120</p>
+      <div class="cta-actions">
+        <button class="btn btn-cta btn-lg" data-book>Book a 15-minute call</button>
+        <button class="btn btn-on-dark btn-lg" data-waitlist>Subscribe to the waitlist</button>
+      </div>
+      <p class="micro">Prefer to write first? hello@prospectio.co.uk</p>
     </div>
   </section>
 
@@ -458,7 +472,6 @@
         <h4>Contact</h4>
         <span class="nap">Prospectio · Antek Automation</span>
         <a class="nap mono" href="mailto:hello@prospectio.co.uk">hello@prospectio.co.uk</a>
-        <a class="nap mono" href="tel:+442392004120">+44 (0)23 9200 4120</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -492,16 +505,70 @@
   </div>
 </div>
 
+<!-- ===================== WAITLIST MODAL ===================== -->
+<div class="modal-backdrop" id="waitlistModal" role="dialog" aria-modal="true" aria-labelledby="wl-title" aria-hidden="true">
+  <div class="modal modal-narrow">
+    <div class="modal-head">
+      <div class="t">
+        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <g stroke="#0F3B3E" stroke-width="1.8" stroke-linecap="round"><circle cx="24" cy="24" r="14.5"/><line x1="24" y1="3" x2="24" y2="13"/><line x1="24" y1="35" x2="24" y2="45"/><line x1="3" y1="24" x2="13" y2="24"/><line x1="35" y1="24" x2="45" y2="24"/></g>
+          <circle cx="24" cy="24" r="3.4" fill="#B0612C"/>
+        </svg>
+        <div>
+          <div class="ttl" id="wl-title">Join the waitlist</div>
+          <div class="sub">Be first to hear when Prospectio opens in your area</div>
+        </div>
+      </div>
+      <button class="modal-close" id="waitlistClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <iframe class="form-embed" title="Subscribe to the Prospectio waitlist" src="https://10362c08.sibforms.com/v2/serve/MUIFAKtt-n9QvGO8pYZB4oWqV_xPD1ze6v3Dlco66d1wxTBThho90YtNrTY5lGyb7qiDQn2y_vMq7luY4-k-OcCNNRkJCQLO8V2ybafit4FmsxirZVHyTwTI448C1UtKjFF6kCdFElV_0UQqVU9lANS2FBZjBAxZqu-J3iv1NAQ0XQ6ztIn8E2D72aU-2M65HRd07uT9xuURLEYJTg==" frameborder="0" scrolling="auto" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
+
 <script>
-  // Booking modal
-  var modal = document.getElementById('bookModal');
+  // Modals (booking + waitlist)
   var lastFocus = null;
-  function openModal() { lastFocus = document.activeElement; modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false'); document.getElementById('modalClose').focus(); }
-  function closeModal() { modal.classList.remove('open'); modal.setAttribute('aria-hidden', 'true'); if (lastFocus) lastFocus.focus(); }
-  document.querySelectorAll('[data-book]').forEach(function (b) { b.addEventListener('click', openModal); });
-  document.getElementById('modalClose').addEventListener('click', closeModal);
-  modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+  function openModal(modal, closeEl) { lastFocus = document.activeElement; modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false'); closeEl.focus(); }
+  function closeModal(modal) { modal.classList.remove('open'); modal.setAttribute('aria-hidden', 'true'); if (lastFocus) lastFocus.focus(); }
+  function wireModal(modalId, triggerSel, closeId) {
+    var modal = document.getElementById(modalId);
+    var closeEl = document.getElementById(closeId);
+    document.querySelectorAll(triggerSel).forEach(function (b) { b.addEventListener('click', function () { openModal(modal, closeEl); }); });
+    closeEl.addEventListener('click', function () { closeModal(modal); });
+    modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(modal); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(modal); });
+  }
+  wireModal('bookModal', '[data-book]', 'modalClose');
+  wireModal('waitlistModal', '[data-waitlist]', 'waitlistClose');
+
+  // VSL: lazy-load the source, then muted-autoplay once in view (captions baked in).
+  (function () {
+    var v = document.getElementById('vsl-player');
+    if (!v) return;
+    var src = v.querySelector('source[data-src]');
+    var loaded = false;
+    function load() {
+      if (loaded || !src) return;
+      loaded = true;
+      src.src = src.getAttribute('data-src');
+      v.load();
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {}); // poster stays if autoplay blocked
+    }
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { load(); io.disconnect(); } });
+      }, { rootMargin: '200px' });
+      io.observe(v);
+    } else {
+      load();
+    }
+    v.addEventListener('click', load); // click-to-play fallback
+  })();
 
   // Mobile nav
   var toggle = document.getElementById('navToggle');
