@@ -83,7 +83,7 @@ img, svg { display: block; }
 .nav-toggle svg { width: 20px; height: 20px; stroke: var(--ink); }
 
 /* ---- Section scaffolding ---- */
-section { padding: 92px 0; }
+section { padding: 40px 0; }
 .section-head { max-width: 640px; }
 .section-head h2 { font-size: clamp(28px, 4vw, 40px); margin-top: 14px; }
 .section-head p { margin-top: 14px; color: var(--text-secondary); font-size: 17.5px; }
@@ -95,8 +95,8 @@ section { padding: 92px 0; }
 @media (max-width: 860px) { .vsl { padding: 24px 0 4px; } }
 
 /* ---- Hero ---- */
-.hero { padding: 76px 0 84px; }
-.hero .wrap { display: grid; grid-template-columns: 1.04fr 0.96fr; gap: 56px; align-items: center; }
+.hero { padding: 64px 0 40px; }
+.hero .wrap { display: grid; grid-template-columns: 1.04fr 0.96fr; gap: 56px; align-items: start; }
 .hero h1 { font-size: clamp(42px, 5.6vw, 68px); margin-top: 20px; }
 .hero .sub { margin-top: 22px; font-size: 19px; line-height: 1.55; color: var(--text-secondary); max-width: 480px; }
 .hero-actions { display: flex; align-items: center; gap: 16px; margin-top: 34px; flex-wrap: wrap; }
@@ -105,7 +105,8 @@ section { padding: 92px 0; }
 .reassure .item { display: flex; align-items: center; gap: 9px; font-size: 14px; color: var(--text-secondary); }
 .reassure .item svg { width: 17px; height: 17px; stroke: var(--status-positive); flex: none; }
 
-/* ---- Hero lead card ---- */
+/* ---- Hero lead card + the VSL inside What it does ---- */
+.what-visual { margin-top: 44px; }
 .lead-card {
   position: relative; background: var(--paper-raised); border: 1px solid var(--hairline);
   border-radius: var(--radius-lg); padding: 24px; box-shadow: 0 1px 2px rgba(23,21,15,0.04);
@@ -127,7 +128,6 @@ section { padding: 92px 0; }
 .lc-source { font-family: var(--font-mono); font-size: 11.5px; color: var(--text-muted); margin-top: 14px; }
 
 /* ---- Proof point ---- */
-.proof { padding: 70px 0; }
 .proof .inset { background: var(--paper-raised); border: 1px solid var(--hairline); border-radius: var(--radius-lg); padding: 48px 44px; display: grid; grid-template-columns: auto 1fr; gap: 40px; align-items: center; }
 .proof .figure { font-family: var(--font-display); font-weight: 600; font-size: clamp(48px, 7vw, 76px); letter-spacing: -0.03em; color: var(--petrol); line-height: 1; white-space: nowrap; }
 .proof .figure small { display: block; font-family: var(--font-ui); font-size: 14px; font-weight: 600; letter-spacing: 0.02em; color: var(--text-muted); margin-top: 8px; text-transform: none; }
@@ -263,8 +263,8 @@ section { padding: 92px 0; }
   .nav-links, .header-cta .btn { display: none; }
   .nav-toggle { display: inline-flex; }
   .header-cta .nav-toggle { display: inline-flex; }
-  section { padding: 64px 0; }
-  .hero { padding: 48px 0 56px; }
+  section { padding: 36px 0; }
+  .hero { padding: 40px 0 32px; }
   .cal-mock { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
 }
